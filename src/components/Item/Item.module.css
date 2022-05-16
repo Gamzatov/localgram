@@ -1,0 +1,19 @@
+.chossed_photo{
+    max-width: 300px;
+    width: 100%;
+}
+.backBtn{
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 5px 15px;
+    transition:  0.3s;
+}
+.backBtn:hover{
+    background-color: #5180B7;
+    color: #fff ;
+    box-shadow: 0px 0px 3px .2px #5180B7;
+}
+.back_btn_wrapper{
+    padding: 20px;
+   
+}

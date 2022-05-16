@@ -1,0 +1,12 @@
+.navbar{
+    grid-area: navbar;
+    background-color:#5181B8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+}
+.navbar > ul >li{
+    display: block;
+    color: #fff;
+}

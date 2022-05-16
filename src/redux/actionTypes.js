@@ -1,0 +1,16 @@
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const INPUT_TEXT = 'INPUT_TEXT';
+export const COMMENT_CREATE = 'COMMENT_CREATE';
+export const COMMENT_UPDATE = 'COMMENT_UPDATE';
+export const COMMENT_DELETE = 'COMMENT_DELETE';
+export const COMMENTS_LOAD = 'COMMENTS_LOAD';
+export const LOADER_DISPLAY_ON = 'LOADER_DISPLAY_ON';
+export const LOADER_DISPLAY_OFF = 'LOADER_DISPLAY_OFF';
+export const SET_PHOTOS = 'SET_PHOTOS';
+export const INPUT_COMMENT = 'INPUT_COMMENT';
+export const GET_USERS = 'GET_USERS';
+export const TYPE_MESSAGE = 'TYPE_MESSAGE';
+export const CREATE_MESSAGE = 'CREATE_MESSAGE';
+export const SET_LOADED = 'SET_LOADED';
+export const GET_PHOTOS = 'GET_PHOTOS';

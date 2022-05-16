@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": 10,
+      "avatar": "https://www.blexar.com/avatar.png",
+      "name": "Artem",
+      "messages": [
+        {
+          "id": "1",
+          "text": "Hello"
+        }
+      ],
+      "photos": [
+        {
+          "id": 0,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.12.2012",
+          "description":"Reading to find answers",
+          "likes" : 5
+        },
+        {
+          "id": 11,
+          "imageUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2022",
+          "description":"Looking Forward",
+          "likes" : 54
+        },
+        {
+          "id": 12,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.05.2002",
+          "description":"Reading to find answers",
+          "likes" : 5
+        },
+        {
+          "id": 13,
+          "imageUrl": "https://images.unsplash.com/photo-1622027720589-44464e7f6bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2Fsa2luZyUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "22.02.2022",
+          "description":"Sunset",
+          "likes" : 22
+        },
+        {
+          "id": 14,
+          "imageUrl": "https://images.unsplash.com/photo-1589192974148-19a519374b32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsayUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2008",
+          "description":"Traveling",
+          "likes" : 25
+        }
+      ],
+      "status": "Life is awesome, try to enjoy every yours breath",
+      "birthDate": "15.05.1996"
+    },
+    {
+      "id": 20,
+      "name": "Dasha",
+      "messages": [],
+      "avatar": "https://png.pngtree.com/element_our/20190524/ourlarge/pngtree-cute-girl-avatar-element-icon-image_1104606.jpg",
+      "photos": [
+        {
+          "id": 21,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.12.2012"
+        },
+        {
+          "id": 22,
+          "imageUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2022"
+        },
+        {
+          "id": 23,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.05.2002"
+        },
+        {
+          "id": 24,
+          "imageUrl": "https://images.unsplash.com/photo-1622027720589-44464e7f6bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2Fsa2luZyUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "22.02.2022"
+        },
+        {
+          "id": 25,
+          "imageUrl": "https://images.unsplash.com/photo-1589192974148-19a519374b32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsayUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2008"
+        }
+      ],
+      "status": "Sample ",
+      "birthDate": "15.05.2009"
+    },
+    {
+      "id": 30,
+      "name": "Svetlana",
+      "messages": [],
+      "avatar": "https://png.pngtree.com/element_our/20190524/ourlarge/pngtree-cute-girl-avatar-element-icon-image_1104606.jpg",
+      "photos": [
+        {
+          "id": 31,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.12.2012"
+        },
+        {
+          "id": 32,
+          "imageUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2022"
+        },
+        {
+          "id": 33,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.05.2002"
+        },
+        {
+          "id": 34,
+          "imageUrl": "https://images.unsplash.com/photo-1622027720589-44464e7f6bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2Fsa2luZyUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "22.02.2022"
+        },
+        {
+          "id": 35,
+          "imageUrl": "https://images.unsplash.com/photo-1589192974148-19a519374b32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsayUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2008"
+        }
+      ],
+      "status": "Sample ",
+      "birthDate": "15.05.2009"
+    },
+    {
+      "id": 40,
+      "name": "Vlad",
+      "messages": [],
+      "avatar": "https://www.blexar.com/avatar.png",
+      "photos": [
+        {
+          "id": 41,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.12.2012"
+        },
+        {
+          "id": 42,
+          "imageUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2022"
+        },
+        {
+          "id": 43,
+          "imageUrl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+          "date": "11.05.2002"
+        },
+        {
+          "id": 44,
+          "imageUrl": "https://images.unsplash.com/photo-1622027720589-44464e7f6bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2Fsa2luZyUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "22.02.2022"
+        },
+        {
+          "id": 45,
+          "imageUrl": "https://images.unsplash.com/photo-1589192974148-19a519374b32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsayUyMGF3YXl8ZW58MHx8MHx8&w=1000&q=80",
+          "date": "11.02.2008"
+        }
+      ],
+      "status": "Sample ",
+      "birthDate": "15.05.2009"
+    }
+
+  ]
+}
