@@ -18,7 +18,6 @@ const Users = () => {
         setPopVisible(false);
     }
 
-
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchUsers());
@@ -51,7 +50,7 @@ const Users = () => {
                         <NavLink  to={`profile/${u.id}`} >
                             <div className={s.link_grid}>
                                 <div className={s.userAvatar_holder}>
-                                    <img src={u.avatar} key={`ava` + u.index} alt={`ava`}/>
+                                    <img src={u.avatar ? u.avatar : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png'} key={`ava` + u.index} alt={`ava`}/>
                                 </div>
                                 <p className={s.userName}>{u.name}</p>
                                 <p className={s.visit_user}>

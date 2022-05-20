@@ -5,6 +5,7 @@ import {itemReducer} from "./reducers/itemReducer";
 import {usersReducer} from "./reducers/usersReducer";
 import {typeMessageReducer} from "./reducers/typeMessageReducer";
 import {photosReducer} from "./reducers/photosReducer"
+import {postsReducer} from "./reducers/postsReducer"
 
 export const rootReducer = combineReducers({
     inputReducer,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     itemReducer,
     usersReducer,
     typeMessageReducer,
-    photosReducer
+    photosReducer,
+    postsReducer
 });

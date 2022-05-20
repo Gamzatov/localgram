@@ -1,21 +1,25 @@
 import axios from "axios";
-import { GET_PHOTOS } from "../actionTypes";
+import { GET_PHOTOS, SET_PHOTOS } from "../actionTypes";
 
+export const setPhotos = (payload) => {
+    return {
+        type: SET_PHOTOS,
+        payload
+    }
+}
 
-
-export const fetchPhotos = (photos) => (dispatch) => {
+export const fetchPhotos = (currentPage, perPage, payload) => (dispatch) => {
     dispatch({
-        type: 'GET_PHOTOS',
-        payload: false
+        type: SET_PHOTOS,
+        payload
     });
-    axios.get('https://jsonplaceholder.typicode.com/albums/1/photos').then((res) => {
+    axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos`).then((res) => {
         dispatch(getPhotos(res.data))
-        console.log('photos res', res.data)
     })
 }
 export const getPhotos = (payload) => {
     return {
-        type: 'GET_PHOTOS',
+        type: GET_PHOTOS,
         payload
     }
 };

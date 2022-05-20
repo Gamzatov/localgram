@@ -14,7 +14,6 @@ const Dialogs = ({ data }) => {
     console.log(data);
     console.log(id);
     const message = useSelector(state => {
-        console.log('text>>>', state)
         const { typeMessageReducer } = state;
         return typeMessageReducer.messages
     });
@@ -28,7 +27,6 @@ const Dialogs = ({ data }) => {
         dispatch(inputText());
     }
     const err = message.map((el) => <p >{el.text}</p>);
-    console.log('asdasdasd', err)
 
     return (
         <div>

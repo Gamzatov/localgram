@@ -9,7 +9,8 @@ import {
     COMMENTS_LOAD,
     LOADER_DISPLAY_ON,
     LOADER_DISPLAY_OFF,
-    SET_PHOTOS, TYPE_MESSAGE, CREATE_MESSAGE
+    SET_PHOTOS, TYPE_MESSAGE, CREATE_MESSAGE,
+    POST_CREATE
 
 } from '../actionTypes';
 
@@ -40,6 +41,13 @@ export const createComment = (text, id) => {
         text
     }
 };
+export const createPost = (text, id) => {
+    return{
+        type:POST_CREATE,
+        data: {text, id},
+        text
+    }
+}
 
 export const commentUpdate = (text, id) => {
     return {

@@ -14,3 +14,9 @@ export const TYPE_MESSAGE = 'TYPE_MESSAGE';
 export const CREATE_MESSAGE = 'CREATE_MESSAGE';
 export const SET_LOADED = 'SET_LOADED';
 export const GET_PHOTOS = 'GET_PHOTOS';
+export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+export const CREATE_POST = 'CREATE_POST';
+export const SET_POST = 'CREATE_POST';
+export const GET_POSTS = 'GET_POSTS';
+export const POST_CREATE = 'POST_CREATE';
+
