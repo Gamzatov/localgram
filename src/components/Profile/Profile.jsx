@@ -6,24 +6,17 @@ import { useDispatch, useSelector } from 'react-redux';
 const Profile = ({ data, photosItem, loading }) => {
     const { id } = useParams();
     const dispatch = useDispatch()
-
+    const windowWidth = window.innerWidth;
     const [currentPage, setCurrentPage] = React.useState(1);
     const [photosPerPage, setPhotosPerPage] = React.useState(8);
     const userN = data.filter((user) => user.id == id)
-    // React.useEffect(() => {
-    //     const fetchPhotos = async () => {
-    //         axios.get(`https://jsonplaceholder.typicode.com/albums/${id}/photos/`).then((res) => {
-    //             setPhotosItem(res.data)
-    //         })
-
-    //     }
-    //     fetchPhotos();
-
-    // }, [id]);
     const photosData = useSelector((state) => {
         const { photosReducer } = state;
         return photosReducer.photos
     });
+    if(windowWidth == 831){
+        setPhotosPerPage(4);
+    }
     const indexOfLastPhoto = currentPage * photosPerPage
     const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage
     const currentPhoto = photosItem.slice(indexOfFirstPhoto, indexOfLastPhoto)
@@ -32,7 +25,6 @@ const Profile = ({ data, photosItem, loading }) => {
     for (let i = 1; i < Math.ceil(totalPhotos / photosPerPage); i++) {
         pageNumbers.push(i);
     }
-    console.log(photosData)
     return (
         <div className={s.user_page}>
             {
@@ -55,18 +47,19 @@ const Profile = ({ data, photosItem, loading }) => {
 
                     </div>
                 ))
+              
             }
 
 
 
             <div className={s.user_photos}>
-                {currentPhoto.map((el) => (
-                    <NavLink to={`/card/${el.id}`}><img src={el.url} className={s.user_photo_img} alt='photo' /> </NavLink>
+                {currentPhoto.map((el, index) => (
+                    <NavLink to={`/card/${el.id}`} key={index}><img src={el.url} className={s.user_photo_img} alt='photo' /> </NavLink>
                 ))}
             </div>
 
             <div className="pages_wrapper">
-                {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
+                {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} key={index} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
                     {page}
                 </span>)}
             </div>

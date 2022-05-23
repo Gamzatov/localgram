@@ -37,24 +37,19 @@ function App({ currentPage, perPage }) {
     const [loading, setLoading] = React.useState(false);
     const [postsItem, setPostsItem] = React.useState([]);
     React.useEffect(() => {
-        setLoading(false);
         const fetchPhotos = async () => {
             axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos/`).then((res) => {
                 setPhotosItem(res.data);
             })
         }
-        setLoading(true);
+        dispatch(fetchUsers());
+        dispatch(fetchPosts());
+        setPostsItem(posts);
         setPhotosItem(photoItems);
         fetchPhotos();
 
     }, [currentPage, dispatch, perPage]);
-    useEffect(() => {
-        dispatch(fetchUsers());
-        dispatch(fetchPosts());
-        setPostsItem(posts);
-
-
-    }, [dispatch]);
+   
 
 
     return (

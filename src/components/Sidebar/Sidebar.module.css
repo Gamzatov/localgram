@@ -2,3 +2,19 @@
     grid-area: side;
     background: #f9f9f9;
 }
+.mob_button_wrapper{
+    display: none;
+}
+
+@media(max-width:1100px){
+    .sidebar{
+        display: none;
+    }
+    .mob_button_wrapper{
+        display: block;
+    }
+    .sidebar_wrapper{
+        position: fixed;
+        /* display: none; */
+    }
+}
