@@ -12,18 +12,12 @@ import Item from './components/Item/Item'
 import { fetchPhotos } from './redux/actions/getPhotos';
 import { fetchPosts } from './redux/actions/getPosts';
 import Home from './components/Home/Home';
+import axios from 'axios';
 
 
 
 function App({ currentPage, perPage }) {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchUsers());
-        dispatch(fetchPosts());
-        setPostsItem(posts);
-
-
-    }, []);
 
     const item = useSelector(state => {
         const { usersReducer } = state;
@@ -42,41 +36,42 @@ function App({ currentPage, perPage }) {
     const [photosItem, setPhotosItem] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [postsItem, setPostsItem] = React.useState([]);
-    // const [currentPage, setCurrentPage] = React.useState(1);
-    // const [photosPerPage, setPhotosPerPage] = React.useState(8);
     React.useEffect(() => {
         setLoading(false);
-        // const fetchPhotos = async () => {
-        //     axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos/`).then((res) => {
-        //         setPhotosItem(res.data);
-        //     })
-        // }
-        dispatch(fetchPhotos(currentPage, perPage));
+        const fetchPhotos = async () => {
+            axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos/`).then((res) => {
+                setPhotosItem(res.data);
+            })
+        }
         setLoading(true);
         setPhotosItem(photoItems);
         fetchPhotos();
 
-    }, [currentPage, dispatch]);
+    }, [currentPage, dispatch, perPage]);
+    useEffect(() => {
+        dispatch(fetchUsers());
+        dispatch(fetchPosts());
+        setPostsItem(posts);
+
+
+    }, [dispatch]);
 
 
     return (
         <div className="App">
             <Header />
             <Sidebar />
-            {
-                !loading ? <h1>Loading</h1> :
+            <div className="content">
+                <Routes>
+                    <Route path="/" element={<Home posts={postsItem} />} />
+                    <Route path='/profile/:id' element={<Profile data={item} photosItem={photosItem} loading={loading} />} />)
+                    <Route path="/dialog/:id" element={<Dialogs data={item} />} />
+                    <Route path='/card/:id' element={<Item photosItem={photosItem}
+                        loading={loading}
+                    />} />
+                </Routes>
+            </div>
 
-                    <div className="content">
-                        <Routes>
-                            <Route path="/" element={<Home posts={postsItem} />} />
-                            <Route path='/profile/:id' element={<Profile data={item} photosItem={photosItem} loading={loading} />} />)
-                            <Route path="/dialog/:id" element={<Dialogs data={item} />} />
-                            <Route path='/card/:id' element={<Item photosItem={photosItem}
-                                loading={loading}
-                            />} />
-                        </Routes>
-                    </div>
-            }
             <Footer />
         </div>
     );
