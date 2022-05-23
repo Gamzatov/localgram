@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 const Profile = ({ data, photosItem, loading }) => {
     const { id } = useParams();
     const dispatch = useDispatch()
-    const windowWidth = window.innerWidth;
     const [currentPage, setCurrentPage] = React.useState(1);
     const [photosPerPage, setPhotosPerPage] = React.useState(8);
     const userN = data.filter((user) => user.id == id)
@@ -14,9 +13,6 @@ const Profile = ({ data, photosItem, loading }) => {
         const { photosReducer } = state;
         return photosReducer.photos
     });
-    if(windowWidth == 831){
-        setPhotosPerPage(4);
-    }
     const indexOfLastPhoto = currentPage * photosPerPage
     const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage
     const currentPhoto = photosItem.slice(indexOfFirstPhoto, indexOfLastPhoto)
@@ -38,6 +34,9 @@ const Profile = ({ data, photosItem, loading }) => {
                                 <p className={s.u_name}>
                                     {user.name}
                                 </p>
+                                <p>
+                                    {user.username}
+                                </p>
                                 <p className={s.u_status}>
                                     {user.status}
                                 </p>
@@ -47,7 +46,7 @@ const Profile = ({ data, photosItem, loading }) => {
 
                     </div>
                 ))
-              
+
             }
 
 

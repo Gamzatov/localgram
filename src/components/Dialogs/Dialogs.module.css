@@ -1,0 +1,23 @@
+.dialog_flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+}
+.sendingMessage {
+  padding: 15px;
+  border-radius: 6px;
+  margin: 10px auto;
+}
+.sendingMessage > p {
+  margin: 20px auto;
+  background: #e7e7e7;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+.sendBtn_wrapper{
+    margin-top: 15px;
+    float: right;
+}
+.messageForm{
+    padding: 30px;
+}

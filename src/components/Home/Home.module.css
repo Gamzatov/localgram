@@ -1,13 +1,36 @@
-.posts_wrapper{
-    max-width: 900px;
-    margin: 0 auto;
+.posts_wrapper {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.pop_post{
-    position: absolute;
-    top: 10%;
-    padding: 20px;
-    margin: 0 auto;
-    box-shadow: 5px 1px 10px;
+.pop_post {
+  position: absolute;
+  top: 10%;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 5px 1px 10px;
+  border-radius: 6px;
+  background: #fff;
+}
+.posts_holder {
+  padding: 10px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  margin: 10px auto;
+}
+.btn_wrapper {
+  margin-top: 15px;
+  /* float: right; */
+  text-align: right;
+}
+.btn_wrapper > button{
     border-radius: 6px;
-    background: #fff;
+    cursor: pointer;
+
+}
+.btn_wrapper > button:hover{
+    background: #5180b7;
+    color: #fff;
+}
+.post_area {
+  margin-top: 15px;
 }

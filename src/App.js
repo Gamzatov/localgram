@@ -18,7 +18,6 @@ import axios from 'axios';
 
 function App({ currentPage, perPage }) {
     const dispatch = useDispatch();
-
     const item = useSelector(state => {
         const { usersReducer } = state;
         return usersReducer.users
@@ -29,27 +28,30 @@ function App({ currentPage, perPage }) {
 
     })
     const posts = useSelector((state) => {
-        console.log('posts', state)
         const { postsReducer } = state;
         return postsReducer.posts
     })
     const [photosItem, setPhotosItem] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [postsItem, setPostsItem] = React.useState([]);
+    console.log('postsItem', postsItem)
     React.useEffect(() => {
         const fetchPhotos = async () => {
             axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos/`).then((res) => {
                 setPhotosItem(res.data);
             })
         }
+        const fetchPosts = async () => {
+            axios.get(`https://jsonplaceholder.typicode.com/posts`).then((res) => {
+                setPostsItem(res.data);
+            })
+        }
         dispatch(fetchUsers());
-        dispatch(fetchPosts());
-        setPostsItem(posts);
-        setPhotosItem(photoItems);
         fetchPhotos();
+        fetchPosts();
 
-    }, [currentPage, dispatch, perPage]);
-   
+    }, []);
+
 
 
     return (

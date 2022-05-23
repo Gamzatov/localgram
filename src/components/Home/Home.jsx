@@ -5,33 +5,30 @@ import axios from 'axios';
 
 const Home = ({ posts }) => {
     const [postItem, setPostItem] = React.useState('');
-    const [body, setbody] = React.useState('');
-    const [title, setTitle] = React.useState('');
     const dispatch = useDispatch();
     const [visiblePop, setVisiblePop] = React.useState(false);
-    console.log(posts);
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const [postPerPage, setPostPerPage] = React.useState(5);
     const handleInput = (e) => {
         setPostItem(e.target.value);
     }
-    console.log(postItem)
     const onSubmit = (e) => {
         e.preventDefault();
         axios.post('https://jsonplaceholder.typicode.com/posts', {
             body: postItem,
             title: 'my_own'
-        }).then(res => console.log(res.data.body))
+        }).then(res => console.log(res.data))
         // setPostItem('');
         setVisiblePop(true);
     }
     const closePop = () => {
         setVisiblePop(false)
     }
-    const [currentPage, setCurrentPage] = React.useState(1);
-    const [postPerPage, setPostPerPage] = React.useState(10);
+
     const indexOfLastPost = currentPage * postPerPage
     const indexOfFirstPost = indexOfLastPost - postPerPage
-    const currentPost = postItem.slice(indexOfFirstPost, indexOfLastPost)
-    const totalPost = postItem.length
+    const currentPost = posts.slice(indexOfFirstPost, indexOfLastPost)
+    const totalPost = posts.length
     const pageNumbers = [];
     for (let i = 1; i < Math.ceil(totalPost / postPerPage); i++) {
         pageNumbers.push(i);
@@ -40,10 +37,10 @@ const Home = ({ posts }) => {
         <div className={s.posts_wrapper}>
             <form onSubmit={onSubmit}>
 
-                <input onChange={handleInput} type="text" placeholder='Type your post' />
-                <button type='submit'>SEND</button>
+                <div className={s.post_area}> <input onChange={handleInput} type="text" placeholder='Type your post' /></div>
+                <div className={s.btn_wrapper}>  <button type='submit'>SEND</button></div>
                 {
-                    posts.map((el) => <div className={s.posts_holder}>
+                    currentPost.map((el, index) => <div className={s.posts_holder} key={index}>
                         <p className={s.post_text}>{el.title}</p>
                     </div>)
                 }
@@ -53,12 +50,13 @@ const Home = ({ posts }) => {
                         <p><b>Your text is:</b> {postItem}</p>
                         <button onClick={closePop}>Close</button>
                     </div>
-                        : <div> <h1>Error </h1>
-                        </div>
+                        : ''
                 }
-                 {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
-                    {page}
-                </span>)}
+                <div className="pages_wrapper">
+                    {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
+                        {page}
+                    </span>)}
+                </div>
             </form>
 
         </div>

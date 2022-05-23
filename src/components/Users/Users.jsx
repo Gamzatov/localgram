@@ -41,7 +41,7 @@ const Users = () => {
     const toDialog = () =>{
         setPopVisible(false);
     };
-
+    console.log(usersArr)
     return (
         <div>
             {
