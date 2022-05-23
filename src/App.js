@@ -19,8 +19,8 @@ function App({ currentPage, perPage }) {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchUsers());
-        dispatch(fetchPosts())
-        setPostsItem(posts)
+        dispatch(fetchPosts());
+        setPostsItem(posts);
 
 
     }, []);
@@ -42,7 +42,6 @@ function App({ currentPage, perPage }) {
     const [photosItem, setPhotosItem] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [postsItem, setPostsItem] = React.useState([]);
-    console.log('postssss>>>>', postsItem)
     // const [currentPage, setCurrentPage] = React.useState(1);
     // const [photosPerPage, setPhotosPerPage] = React.useState(8);
     React.useEffect(() => {
