@@ -35,7 +35,7 @@ const Home = ({ posts }) => {
     }
     return (
         <div className={s.posts_wrapper}>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className={s.postsForm}>
 
                 <div className={s.post_area}> <input onChange={handleInput} type="text" placeholder='Type your post' /></div>
                 <div className={s.btn_wrapper}>  <button type='submit'>SEND</button></div>
@@ -53,9 +53,16 @@ const Home = ({ posts }) => {
                         : ''
                 }
                 <div className="pages_wrapper">
-                    {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
-                        {page}
-                    </span>)}
+                    {<span onClick={() => setCurrentPage(currentPage + 1)}>Next</span>}
+                    <div className={s.pagination}>
+                        {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
+                            {page}
+                        </span>)}
+                    </div>
+                    <div className={s.pageCounter}>
+                        <span>{currentPage}/{Math.ceil(totalPost / postPerPage)}</span>
+                    </div>
+                    {<span onClick={() => setCurrentPage(currentPage - 1)}>Previous </span>}
                 </div>
             </form>
 

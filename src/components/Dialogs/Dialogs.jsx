@@ -43,7 +43,7 @@ const Dialogs = ({ data }) => {
                             <form className={s.messageForm} onSubmit={handleSubmit} action="">
                                 <input onChange={handleInput} type="text" value={messageItem} placeholder='text' />
                                 <div className={s.sendBtn_wrapper}>
-                                    <button>Send</button>
+                                    <button className='btn'>Send <ion-icon name="paper-plane-outline"></ion-icon></button>
                                 </div>
 
                             </form>

@@ -41,9 +41,11 @@
 }
 @media(max-width:1100px){
     .user_photos{
+        padding: 30px;
         grid-template-columns: 1fr 1fr;
     }
     .user_photo_img{
         width: 350px;
+        max-width: 100%;
     }
 }
