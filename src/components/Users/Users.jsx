@@ -40,6 +40,7 @@ const Users = ({menu, setMenu}) => {
     };
     const toDialog = () =>{
         setPopVisible(false);
+        setMenu(!menu);
     };
     const handleuser = () =>{
         setMenu(!menu)
