@@ -21,7 +21,7 @@ const Sidebar = () => {
             <div className={s.menu_wrapper}>
                 <div className={menu ? s.sidebar : s.mob_sidebar}>
                     
-                    <Users />
+                    <Users menu={menu} setMenu={setMenu}/>
                 </div>
             </div>
 

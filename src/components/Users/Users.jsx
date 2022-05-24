@@ -7,7 +7,7 @@ import {Link, NavLink} from "react-router-dom";
 import {createMessage, typeMessage} from "../../redux/actions/actions";
 import * as uniqid from "uniqid";
 
-const Users = () => {
+const Users = ({menu, setMenu}) => {
     const [popVisible, setPopVisible] = React.useState(false);
     const [message, setMessage] = React.useState('');
     const togglePop = (openPop) => {
@@ -41,13 +41,16 @@ const Users = () => {
     const toDialog = () =>{
         setPopVisible(false);
     };
+    const handleuser = () =>{
+        setMenu(!menu)
+    }
     console.log(usersArr)
     return (
         <div>
             {
                 usersArr.map((u, content) => (
                     <div className={s.userInfo_holder} key={u.id}>
-                        <NavLink  to={`profile/${u.id}`} >
+                        <NavLink  to={`profile/${u.id}`}  onClick={handleuser}>
                             <div className={s.link_grid}>
                                 <div className={s.userAvatar_holder}>
                                     <img src={u.avatar ? u.avatar : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png'} key={`ava` + u.index} alt={`ava`}/>
