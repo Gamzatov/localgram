@@ -58,10 +58,14 @@ const Profile = ({ data, photosItem, loading }) => {
             </div>
 
             <div className="pages_wrapper">
+                {<span onClick={() => setCurrentPage(currentPage + 1)}>Next</span>}
                 {pageNumbers.map((page, index) => <span onClick={() => dispatch(setCurrentPage(page))} key={index} className={currentPage === (index + 1) ? 'activePage' : 'page'}>
                     {page}
                 </span>)}
+                {<span onClick={() => setCurrentPage(currentPage - 1)}>Previous </span>}
             </div>
+
+
 
         </div>
 

@@ -60,6 +60,7 @@ function App({ currentPage, perPage }) {
             <Sidebar />
             <div className="content">
                 <Routes>
+                    <Route path="localgram" element={<Home posts={postsItem} />} />
                     <Route path="/" element={<Home posts={postsItem} />} />
                     <Route path='/profile/:id' element={<Profile data={item} photosItem={photosItem} loading={loading} />} />)
                     <Route path="/dialog/:id" element={<Dialogs data={item} />} />
