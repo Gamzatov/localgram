@@ -11,17 +11,17 @@ const Sidebar = () => {
     const mobWidth = window.innerWidth;
     if (mobWidth == 1100) {
         setMenu(false);
-        console(menu)
+        console.log('width', menu);
     }
     return (
         <div className={s.sidebar_wrapper}>
             <div className={s.mob_button_wrapper}>
-                <button onClick={toggleMenu} className={s.mob_btn}>{menu ? <ion-icon name="menu-outline"></ion-icon> : 'X'}</button>
+                <button onClick={toggleMenu} className={s.mob_btn}>{menu ? <ion-icon name="menu-outline"></ion-icon> : ''}</button>
             </div>
             <div className={s.menu_wrapper}>
                 <div className={menu ? s.sidebar : s.mob_sidebar}>
-                    
-                    <Users menu={menu} setMenu={setMenu}/>
+                    <button onClick={toggleMenu} className={!menu ? s.sidebarBtn : ''}>X</button>
+                    <Users menu={menu} setMenu={setMenu} />
                 </div>
             </div>
 

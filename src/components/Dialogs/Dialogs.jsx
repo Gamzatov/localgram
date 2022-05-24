@@ -11,8 +11,6 @@ const Dialogs = ({ data }) => {
     const dispatch = useDispatch();
 
     const [messageItem, setMessageItem] = React.useState('');
-    console.log(data);
-    console.log(id);
     const message = useSelector(state => {
         const { typeMessageReducer } = state;
         return typeMessageReducer.messages
@@ -39,7 +37,9 @@ const Dialogs = ({ data }) => {
             {
                 data.filter((user) => user.id == id).map((user) => (
                     <div className={s.container} key={user.id}>
+
                         <div className={s.user_info}>
+
                             <form className={s.messageForm} onSubmit={handleSubmit} action="">
                                 <input onChange={handleInput} type="text" value={messageItem} placeholder='text' />
                                 <div className={s.sendBtn_wrapper}>
@@ -47,7 +47,7 @@ const Dialogs = ({ data }) => {
                                 </div>
 
                             </form>
-
+                            <div className={s.userInfo}>{user.name}</div>
                         </div>
 
                     </div>
